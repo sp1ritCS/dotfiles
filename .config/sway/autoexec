@@ -1,0 +1,12 @@
+exec swayidle -w \
+    timeout 300 'swaylock -f -c 000000' \
+    timeout 600 'swaymsg "output * dpms off"' \
+    resume 'swaymsg "output * dpms on"' \
+    before-sleep 'swaylock -f -c 000000'
+
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+#exec export $(gnome-keyring-daemon --start)
+exec ~/workspace/linux/kdeconnect-kde/build/bin/kdeconnectd
+exec /usr/bin/nextcloud
+exec swaymsg "workspace 9; exec /usr/bin/keepassxc"
+

@@ -1,0 +1,32 @@
+#border normal
+#for_window [app_id="^.*"] border pixel 5
+
+# class                 border  backgr. text    indicator child_border
+#client.focused          #138eee #138eee #ECF0F1 #be5046   #138eee
+#client.focused_inactive #7F8C8D #7F8C8D #ECF0F1 #5c6370
+#client.unfocused        #ECF0F1 #ECF0F1 #7F8C8D #5c6370 
+
+output * bg ~/Pictures/wallpapers/mpount/pastel_mountains_v02_color_03_5120x2880.resized.png fill
+
+output DVI-D-1 pos 0 0 mode 1280x1024@75.025002Hz
+output DP-1 pos 1280 0 mode 1920x1080@143.98100Hz
+
+workspace 1 output DP-1
+workspace 2 output DVI-D-1
+workspace 3 output DVI-D-1
+workspace 9 output DVI-D-1
+
+bar {
+    swaybar_command waybar
+}
+
+font Avenir 10
+
+gaps inner 10
+gaps outer 20
+
+include "~/.spirit/sway/settings"
+include "~/.spirit/sway/keybinds"
+include "~/.spirit/sway/colors"
+include "~/.spirit/sway/autoexec"
+include /etc/sway/config.d/*
