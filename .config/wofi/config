@@ -1,0 +1,9 @@
+allow_images=true
+no_actions=true
+prompt=Search
+height=500
+width=400
+x=0
+y=0
+location=top_left
+drun-display_generic=true
