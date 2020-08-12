@@ -1,0 +1,5 @@
+client.focused          #5accaf #5accaf #ECF0F1 #5accaf   #5accaf
+client.focused_inactive #80c990 #80c990 #ECF0F1 #80c990
+client.unfocused        #808080 #808080 #ECF0F1 #808080 
+
+

@@ -1,0 +1,25 @@
+window {
+  background: rgba(40, 38, 68, 0.9);
+}
+* {
+  color: #ffffff;
+  font-weight: 500;
+}
+#input {
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  padding: 10px;
+}
+#clock {
+  font-size: 2em;
+}
+#entry:selected {
+  background-color: #5accaf;
+}
+#img {
+  margin-right: 10px;
+}
+#entry {
+  padding: 5px 10px;
+}
