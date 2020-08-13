@@ -12,6 +12,8 @@
 * waybar
 * wofi
 * mako
+### cordless
+* theme (inspired by atom)
 ### rEFInd
 * modified dreary
 ### scripts
