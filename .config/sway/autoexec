@@ -1,8 +1,11 @@
+set $lock swaylock --clock --indicator -i ~/Pictures/wallpapers/Dynamic-gnome-wallpapers/Exodus/Exodus-morning.jpeg --effect-scale 0.4 --effect-vignette 0.2:0.5 --effect-blur 4x2 --datestr "%a, %e.%m.%y" --timestr "%H:%M" --indicator --indicator-radius 100 --ring-color 4b5162 --ring-ver-color 5294e2 --ring-clear-color 5294e2 --ring-wrong-color 7c818c --separator-color 5294e2 --key-hl-color 5294e2 --bs-hl-color 383c4a --font SanFranciscoText --text-color 7c818c -n -r
+
+bindsym Mod4+F8 exec $lock
 exec swayidle -w \
-    timeout 300 'swaylock -f -c 000000' \
+    timeout 300 $lock \
     timeout 600 'swaymsg "output * dpms off"' \
     resume 'swaymsg "output * dpms on"' \
-    before-sleep 'swaylock -f -c 000000'
+    before-sleep $lock
 
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 #exec export $(gnome-keyring-daemon --start)
