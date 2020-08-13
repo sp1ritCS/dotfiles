@@ -28,6 +28,10 @@ fi
 export ZSH_AUTOSUGGEST_STRATEGY=(completion history)
 export ZSH_AUTOSUGGEST_USE_ASYNC=true
 
+if [ "$DESKTOP_SESSION" = "sway" ]; then
+    export $(gnome-keyring-daemon --start)
+fi
+
 RED="\e[31m"
 ORANGE="\e[33m"
 BLUE="\e[94m"
