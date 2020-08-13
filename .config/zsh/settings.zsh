@@ -18,7 +18,7 @@ HISTFILE=~/.shell_history
 HISTSIZE=1000
 SAVEHIST=1000
 setopt beep extendedglob
-bindkey -v
+#bindkey -v
 # End of lines configured by zsh-newuser-install
 
 source ~/.config/zsh/vars.zsh
