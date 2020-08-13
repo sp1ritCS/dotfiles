@@ -169,7 +169,7 @@ mode "gaps" {
 }
 bindsym $mod+g mode "gaps"
 
-bindsym Print exec "bash ~/.spirit/scripts/grim-wrapper.sh"
-bindsym Control+Print exec "bash ~/.spirit/scripts/grim-wrapper.sh -w"
-bindsym Mod1+Print exec "bash ~/.spirit/scripts/grim-wrapper.sh -s"
+bindsym Print exec "bash ~/.local/bin/grim-wrapper.sh"
+bindsym Control+Print exec "bash ~/.local/bin/grim-wrapper.sh -w"
+bindsym Mod1+Print exec "bash ~/.local/bin/grim-wrapper.sh -s"
 
