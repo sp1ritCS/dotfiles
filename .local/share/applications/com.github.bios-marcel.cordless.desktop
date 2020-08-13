@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0.0
+Type=Application
+Terminal=false
+Exec=alacritty -e cordless
+Name=Cordless (Alacritty)
+Comment=Opens cordless in alacritty
+Icon=discord
