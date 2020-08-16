@@ -1,0 +1,2 @@
+#!/bin/bash
+pkexec tac /var/log/syslog | grep -hiP 'smartd\[[[:digit:]]+\]:' | grep -iP "previous self-test" >> ~/.cache/smarthdd

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+figlet -f small "$(hostname)" | lolcat -f
+source "$(dirname $BASH_SOURCE)/ram"

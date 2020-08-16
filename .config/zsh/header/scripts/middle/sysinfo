@@ -1,0 +1,5 @@
+#!/bin/bash
+echo -e "${color_title} Arch info:${ansi_reset}
+${color_subtitle}Kenel${ansi_reset}...: $(uname -sr)
+${color_subtitle}Packages${ansi_reset}: $(pacman -Qq --color never | wc -l) (pacman) $(flatpak list | wc -l) (flatpak)
+"

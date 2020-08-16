@@ -1,0 +1,68 @@
+#!/bin/bash
+export LANG='en_US.UTF-8'
+
+color_primary=${color_primary:="36"}
+color_secondary=${color_secondary:="35"}
+color_danger=${color_danger:="38;5;1"}
+color_warning=${color_warning:="38;5;11"}
+color_success=${color_success:="38;5;10"}
+
+# Declare array of services and pretty human readable names
+declare -a services=(
+"firewalld"
+"libvirtid"
+"docker"
+"org.cups.cupsd"
+"nextdns"
+)
+declare -a serviceName=(
+"Firewall"
+"libvirt"
+"Docker"
+"Printing (CUPS)"
+"NextDNS"
+)
+declare -a serviceStatus=()
+
+# Get status of all my services
+for service in "${services[@]}"
+do
+    serviceStatus+=($(systemctl is-active "$service.service"))
+done
+
+# Maximum column width
+#width=$((49-2))
+width=$((34))
+
+# Current line and line length
+line=""
+lineLen=0
+
+echo -e "${color_title}Services running:${ansi_reset}"
+
+for i in ${!serviceStatus[@]}
+do
+    # Next line and next line length
+    next="  ${serviceName[$i]}"
+    nextLen=$((1+${#next}))
+
+    # If the current line will exceed the max column with then echo the current line and start a new line
+    if [[ $((lineLen+nextLen)) -gt width ]]; then
+    echo -e "$line"
+    lineLen=0
+    line=""
+    fi
+
+    lineLen=$((lineLen+nextLen))
+
+    # Color the next line green if it's active, else red
+    if [[ "${serviceStatus[$i]}" == "active" ]]; then
+    line+="${color_success}●${ansi_reset} ${serviceName[$i]} "
+    else
+    line+="${text_bold}${color_warning}▲${ansi_reset} ${serviceName[$i]} "
+    fi
+done
+
+# echo what is left
+echo -e "$line"
+
