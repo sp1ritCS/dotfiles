@@ -20,9 +20,9 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk/jre/
 
 if [[ -n $SSH_CONNECTION ]]; then
-    export EDITOR="vim"
+    export EDITOR="nvim"
 else
-    export EDITOR="gvim"
+    export EDITOR="nvim"
 fi
 
 export ZSH_AUTOSUGGEST_STRATEGY=(completion history)
