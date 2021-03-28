@@ -23,7 +23,7 @@ export JAVA_HOME=/usr/lib/jvm/java-8-openjdk/jre/
 if [[ -n $SSH_CONNECTION ]]; then
     export EDITOR="nvim"
 else
-    export EDITOR="nvim"
+    export EDITOR="nvim-gtk --no-fork"
 fi
 
 export ZSH_AUTOSUGGEST_STRATEGY=(completion history)
