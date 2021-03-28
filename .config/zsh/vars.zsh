@@ -1,15 +1,16 @@
 export ANDROID_HOME=/opt/android-sdk/
-export NPM_PACKAGES="${HOME}/.npm-packages"
-export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
+#export NPM_PACKAGES="${HOME}/.npm-packages"
+#export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
 
 export PATH="\
 /usr/lib/ccache/bin\
 :$PATH\
 :$HOME/.config/composer/vendor/bin\
+:$HOME/.cargo/bin\
 :$ANDROID_HOME/tools\
 :$ANDROID_HOME/tools/bin\
 :$ANDROID_HOME/platform-tools\
-:$NPM_PACKAGES/bin\
+:$HOME/.local/share/node_modules/bin\
 :$HOME/.local/bin\
 "
 #export PATH=$PATH:$ANDROID_HOME/emulator
