@@ -1,3 +1,4 @@
+alias ls="ls --color=auto"
 alias npm="pnpm"
 alias o="xdg-open"
 function cs { cd $1 && ls -lA; }
