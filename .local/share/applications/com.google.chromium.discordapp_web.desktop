@@ -2,7 +2,7 @@
 Version=1.0.0
 Type=Application
 Terminal=false
-Exec=chromium --app=https://discordapp.com/channels/@me
+Exec=flatpak run com.github.Eloston.UngoogledChromium --app=https://discordapp.com/channels/@me
 Name=Discord (Chromium)
 Comment=Opens the Discord Webclient in Chromium
 Icon=discord
