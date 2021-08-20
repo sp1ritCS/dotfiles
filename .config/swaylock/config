@@ -1,0 +1,29 @@
+clock
+# indicator
+# no-unlock-indicator
+# daemonize
+indicator-caps-lock
+timestr=%k:%M
+datestr=%B %d %Y
+image=/usr/share/wallpapers/default-1920x1080.jpg
+# screenshots
+scaling=fill
+effect-scale=1.4
+effect-vignette=0.2:0.5
+effect-blur=4x4
+font=Avenir Next LT Pro Regular
+
+# Ring
+indicator-radius=100
+line-uses-ring
+line-color=#3b4252
+text-color=#eceff4
+#inside-color=#3d7f8d
+inside-ver-color=#5e81ac
+line-ver-color=#5e81ac
+ring-ver-color=#5e81ac
+ring-color=#4c566a
+key-hl-color=#5e81ac
+separator-color=#5e81ac
+layout-text-color=#eceff4
+line-wrong-color=#d08770

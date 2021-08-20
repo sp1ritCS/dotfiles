@@ -6,10 +6,14 @@
 #client.focused_inactive #7F8C8D #7F8C8D #ECF0F1 #5c6370
 #client.unfocused        #ECF0F1 #ECF0F1 #7F8C8D #5c6370 
 
-output * bg ~/Pictures/wallpapers/mpount/pastel_mountains_v02_color_03_5120x2880.resized.png fill
+output * bg /usr/share/wallpapers/default-1920x1080.jpg fill
 
 output DVI-D-1 pos 0 0 mode 1280x1024@75.025002Hz
 output DP-1 pos 1280 0 mode 1920x1080@143.98100Hz
+output HDMI-A-2 pos 3200 0 mode 1920x1080@60.000Hz
+
+input 1386:847:Wacom_Cintiq_Pro_13_Pen map_to_output HDMI-A-2
+input 1386:851:Wacom_Cintiq_Pro_13_Touch_Finger map_to_output HDMI-A-2
 
 workspace 1 output DP-1
 workspace 2 output DVI-D-1
@@ -20,7 +24,8 @@ bar {
     swaybar_command waybar
 }
 
-font Avenir 10
+font Avenir Next LT Pro Regular 11
+seat seat0 xcursor_theme Breeze_Snow 24
 
 gaps inner 10
 gaps outer 20
@@ -29,4 +34,4 @@ include "~/.config/sway/settings"
 include "~/.config/sway/keybinds"
 include "~/.config/sway/colors"
 include "~/.config/sway/autoexec"
-include /etc/sway/config.d/*
+#include /etc/sway/config.d/*

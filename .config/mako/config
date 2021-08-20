@@ -1,8 +1,21 @@
-font=Meslo LGS NF 11
+font=Avenir Next LT Pro Regular 12
+
+background-color=#353b49
+text-color=#e5e9f0
 padding=10
-background-color=#282644E6
-text-color=#ffffff
-border-size=5
-border-color=#5accaf
+margin=10
+progress-color=over #eceff480
+icon-path=/usr/share/icons/Papirus-Dark
+max-icon-size=100
+
 icons=1
 markup=1
+
+border-size=3
+border-radius=10
+border-color=#3b4252
+
+default-timeout=5000
+
+[urgency=high]
+ignore-timeout=1

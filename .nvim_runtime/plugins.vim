@@ -7,7 +7,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-eunuch'
 Plug 'majutsushi/tagbar'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'glepnir/dashboard-nvim'
 
 " Langs
 Plug 'lervag/vimtex'
@@ -17,6 +18,9 @@ Plug 'posva/vim-vue'
 Plug 'rust-lang/rust.vim'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'thosakwe/vim-flutter'
+
+" LSP
+Plug 'neovim/nvim-lspconfig'
 
 " Colorschemes
 Plug 'joshdick/onedark.vim'

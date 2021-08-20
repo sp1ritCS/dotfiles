@@ -1,16 +1,28 @@
-set $lock 'swaylock --clock --indicator -i ~/Pictures/wallpapers/Dynamic-gnome-wallpapers/Exodus/Exodus-morning.jpeg --effect-scale 0.4 --effect-vignette 0.2:0.5 --effect-blur 4x2 --datestr "%a, %e.%m.%y" --timestr "%H:%M" --indicator --indicator-radius 100 --ring-color 4b5162 --ring-ver-color 5294e2 --ring-clear-color 5294e2 --ring-wrong-color 7c818c --separator-color 5294e2 --key-hl-color 5294e2 --bs-hl-color 383c4a --font SanFranciscoText --text-color 7c818c -n -r'
+set $lock '/usr/local/bin/swaylock'
 
 bindsym Mod4+F8 exec $lock
 
-exec swayidle -w \
+exec_always {
+    systemctl --user import-environment
+    gsettings set org.gnome.desktop.interface gtk-theme 'Flat-Remix-GTK-Blue'
+    gsettings set org.gnome.desktop.interface icon-theme 'Papirus'
+    gsettings set org.gnome.desktop.interface cursor-theme 'Breeze_Snow'
+    test -e $SWAYSOCK.wob || mkfifo $SWAYSOCK.wob
+    tail -f $SWAYSOCK.wob | wob
+}
+
+exec swayidle \
     timeout 300 $lock \
     timeout 600 'swaymsg "output * dpms off"' \
     resume 'swaymsg "output * dpms on"' \
     before-sleep $lock
 
-exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec /usr/libexec/polkit-gnome-authentication-agent-1
 #exec export $(gnome-keyring-daemon --start)
-exec ~/workspace/linux/kdeconnect-kde/build/bin/kdeconnectd
-exec /usr/bin/nextcloud
+exec mako
+exec python3 /usr/bin/inactive-windows-transparency
+#exec ~/workspace/linux/kdeconnect-kde/build/bin/kdeconnectd
+exec /usr/bin/nextcloud --background
+exec mako
 exec swaymsg "workspace 9; exec /usr/bin/keepassxc"
 
