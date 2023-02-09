@@ -1,8 +1,8 @@
 if (has("termguicolors"))
 	set termguicolors
 endif
-set background=dark
-colorscheme nord
+set background=light
+colorscheme iceberg
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:airline_powerline_fonts = 1

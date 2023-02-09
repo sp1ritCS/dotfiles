@@ -19,6 +19,14 @@ Plug 'rust-lang/rust.vim'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'thosakwe/vim-flutter'
 
+Plug 'simrat39/rust-tools.nvim'
+
+"Competions
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-buffer'
+
 " LSP
 Plug 'neovim/nvim-lspconfig'
 
@@ -27,4 +35,5 @@ Plug 'joshdick/onedark.vim'
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
 Plug 'ayu-theme/ayu-vim'
 Plug 'arcticicestudio/nord-vim'
+Plug 'cocopon/iceberg.vim'
 call plug#end()
